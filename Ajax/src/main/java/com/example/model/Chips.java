@@ -27,6 +27,5 @@ public class Chips {
 	public void setCourses(List<String> courses) {
 		this.courses = courses;
 	}
-//gfg
 
 }
