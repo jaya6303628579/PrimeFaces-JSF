@@ -1,0 +1,5 @@
+com\example\model\Person.class
+com\example\service\PersonService.class
+com\example\repository\EntityManagerProducer.class
+com\example\repository\PersonRepository.class
+com\example\app\App.class

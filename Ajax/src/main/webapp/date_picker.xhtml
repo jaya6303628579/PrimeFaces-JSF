@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+<h:body>
+	<h:form>
+		<p:growl id="messages" showDetail="true" widgetVar="growl" />
+		<h3>Basic DatePicker</h3>
+		<p:datePicker id="basic" value="#{datePicker.selectedDate}"
+			label="Basic">
+			<p:ajax event="dateSelect"
+				listener="#{datePicker.showSelectedDate}" update="messages" />
+		</p:datePicker>
+
+
+
+		<h3>DatePicker with Time Selection</h3>
+		<p:datePicker id="time" value="#{datePicker.selectedDate}"
+			label="Time" showTime="true">
+			<p:ajax event="dateSelect"
+				listener="#{datePicker.showSelectedDate}" update="messages" />
+		</p:datePicker>
+
+
+
+		<h3>Month Picker</h3>
+		<p:datePicker id="month" value="#{datePicker.selectedDate}"
+			label="Month" view="month">
+			<p:ajax event="dateSelect"
+				listener="#{datePicker.showSelectedDate}" update="messages" />
+		</p:datePicker>
+
+
+		<h3>Year Picker by range</h3>
+		<p:datePicker id="yearNav" value="#{datePicker.selectedDate}"
+			label="Year Picker" yearNavigator="true" yearRange="2000:2030">
+			<p:ajax event="dateSelect" listener="#{datePicker.showSelectedDate}" update="messages" />
+		</p:datePicker>
+
+
+
+		<h3>Custom Date Format</h3>
+		<p:datePicker id="customFormat" value="#{datePicker.selectedDate}" label="Custom Format" pattern="dd-MMM-yyyy">
+			<p:ajax event="dateSelect" listener="#{datePicker.showSelectedDate}" update="messages" />
+		</p:datePicker>
+
+		<h3>Inline DatePicker</h3>
+		<p:datePicker id="inline" value="#{datePicker.selectedDate}" inline="true">
+			<p:ajax event="dateSelect" listener="#{datePicker.showSelectedDate}" update="messages" />
+		</p:datePicker>
+	</h:form>
+
+</h:body>
+</html>
+

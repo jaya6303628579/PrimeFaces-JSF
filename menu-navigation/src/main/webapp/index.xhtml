@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	 <h:head>
+      <title>Menu</title>
+   </h:head>
+   <h:body>
+     <h1>MENU And Navigation</h1>
+     <f:view>
+     <h:form>
+     <h1>BreadCrumb</h1>
+     <p:breadCrumb homeDisplay="icon">
+     <p:menuitem value="Home" url="index.xhtml"/>
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:breadCrumb>
+     
+     <h1>context-menu give right in the page</h1>
+     <p:contextMenu>
+     <p:menuitem value="Home" url="index.xhtml"/>
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:contextMenu>
+    
+     
+     <h1>MENU AND SUBMENU</h1>
+     <p:menu>
+     <p:submenu label="HOME">
+     <p:menuitem value="Home" url="index.xhtml"/>
+     </p:submenu>
+     <p:submenu label="music">
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:submenu>
+     </p:menu>
+      <h1>tieredMenu</h1>
+     <p:tieredMenu>
+     <p:submenu label="HOME">
+     <p:menuitem value="Home" url="index.xhtml"/>
+     </p:submenu>
+     <p:submenu label="music">
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:submenu>
+     </p:tieredMenu>
+     <h1>tab menu</h1>
+     <p:tabMenu activeIndex="#{param.i}">
+     <p:menuitem value="page1" url="page1.xhtml">
+     <f:param name="i" value="0"/>
+     </p:menuitem>
+     <p:menuitem value="page2" url="page2.xhtml">
+     <f:param name="i" value="1"/>
+     </p:menuitem>
+     </p:tabMenu>
+     </h:form>
+     </f:view>
+        <p:separator/>
+   <h:form>
+   <h3>slideMenu</h3>
+   <p:slideMenu style="width:200px">
+   <p:submenu label="HOME">
+   		<p:menuitem value="MENUS" action="index.xhtml"/>
+   </p:submenu>
+   <p:submenu label="others">
+   		<p:menuitem value="page1" action="page1.xhtml" ajax="false"/>
+   		<p:menuitem value="page2" action="page2.xhtml"/>
+   </p:submenu>
+   </p:slideMenu>
+   
+   <p:separator/>
+   <h3>stack menu</h3>
+   <p:stack icon="resources/images/stackimg.jpg" expanded="true">
+   <p:menuitem value="Home" icon="resources/images/fb.png" url="index.xhtml" />
+     <p:menuitem value="page1" icon="resources/images/insta.png" url="page1.xhtml"/>
+     <p:menuitem value="page2" icon="resources/images/whats.png" url="page2.xhtml"/>
+   </p:stack>
+   <p:separator/>
+   
+   <h3>Mega Menu</h3>
+   <p:megaMenu style="margin-top:40px">
+   <p:submenu label="ELECTRONICS">
+   <p:column>
+   <p:submenu label="MOBILES">
+   <p:menuitem value="Apple" url="#"/>
+   <p:menuitem value="Vivo" url="#"/>
+   <p:menuitem value="Samsung" url="#"/>
+   </p:submenu>
+   <p:submenu label="AC">
+   <p:menuitem value="godrage" url="#"/>
+   <p:menuitem value="vafa" url="#"/>
+   <p:menuitem value="Samsung" url="#"/>
+   </p:submenu>
+   </p:column>
+   
+   <p:column>
+   <p:submenu label="FAN">
+   <p:menuitem value="babaj" url="#"/>
+   <p:menuitem value="usha" url="#"/>
+   <p:menuitem value="tata" url="#"/>
+   </p:submenu>
+   <p:submenu label="TV">
+   <p:menuitem value="LG" url="#"/>
+   <p:menuitem value="panasonic" url="#"/>
+   <p:menuitem value="Samsung" url="#"/>
+   </p:submenu>
+   </p:column>
+   </p:submenu>
+   
+   </p:megaMenu>
+   </h:form>
+   </h:body>
+</html>

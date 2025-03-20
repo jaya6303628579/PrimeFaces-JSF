@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:primeflex="http://primefaces.org/primeflex">
+
+<h:head>
+	<title>PanelGrid</title>
+</h:head>
+<h:body>
+<h:form>
+        <h1 style="margin-top: 0">PickList</h1>
+        <p:growl id="msg" showDetail="true" showSummary="true" life="4000" />
+        <p:pickList id="pickList" value="#{pickListView.cities}" var="cities" itemLabel="#{cities}" itemValue="#{cities}">
+        <p:ajax event="transfer" 
+                    listener="#{pickListView.onTransfer}" 
+                    update="msg"/>
+        
+        </p:pickList>
+</h:form>
+</h:body>
+</html>
+

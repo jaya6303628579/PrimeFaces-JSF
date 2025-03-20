@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	 <h:head>
+      <title>Menu</title>
+   </h:head>
+   <h:body>
+   <h:form>
+   <h:panelGrid columns="2">
+   <h:outputLabel for="name" value="name:"/>
+   <p:inputText id="name"/>
+   <h:outputLabel value="first input :"/>
+   <p:inputText id="firstname"/>
+   <h:outputLabel value="secound input"/>
+   <p:inputText id="secound"/>
+   <p:commandButton value="without partial submit" partialSubmit="false" process="name"/>
+   <p:commandButton value="with partial submit" partialSubmit="true" process="name,firstname"/>
+   
+   </h:panelGrid>
+    
+    <p:log/>
+     </h:form> 
+   </h:body>
+</html>

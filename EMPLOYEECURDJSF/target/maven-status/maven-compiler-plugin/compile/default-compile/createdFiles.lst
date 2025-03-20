@@ -1,0 +1,4 @@
+com\example\util\HibernateUtil.class
+com\example\dao\EmsDAO.class
+com\example\bean\EmsBean.class
+com\example\model\Ems.class

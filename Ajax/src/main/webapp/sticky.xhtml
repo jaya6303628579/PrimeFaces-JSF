@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	 <h:head>
+      <title>Ajax Listener</title>
+      <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces"/>
+   </h:head>
+   <h:body>
+   <p:toolbar id="tb">
+   <f:facet name="left">
+   <p:commandButton type="button" value="New" icon="pi pi-file"/>
+   <p:commandButton type="button" value="Open" icon="pi pi-folder-open"/>
+   </f:facet>
+   
+   <f:facet name="right">
+   <p:commandButton type="button" title="Save" icon="pi pi-save"/>
+   <p:commandButton type="button" title="Delete" icon="pi pi-trash"/>
+   <p:commandButton type="button" title="Print" icon="pi pi-print"/>
+   </f:facet>
+   </p:toolbar> 
+   <h1>hello</h1>
+   <div style="height:1000px"></div>
+   
+   <p:sticky target="tb"/>
+   </h:body>
+</html>

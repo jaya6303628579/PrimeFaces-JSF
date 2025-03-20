@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	 <h:head>
+      <title>selector</title>
+   </h:head>
+   <h:body>
+   <h:form>
+   <p:panel header="SELECTORS">
+   <h:panelGrid columns="4">
+   <h:outputLabel for="txtname" value="Enter the name"/>
+   <p:inputText id="txtname" value="#{usr.name}" required="true" label="Name" requiredMessage="plz enter the Name">
+   <f:validateLength minimum="3"/>
+   </p:inputText>
+   <p:message for="txtname" />
+   <h:outputText value="#{usr.name}"/>
+   
+   <h:outputLabel for="txtaddress" value="Enter the address"  />
+   <p:inputText id="txtaddress" value="#{usr.address}" required="true" label="Address" requiredMessage="plz enter the address"/>
+   <p:message for="txtaddress" />
+   <h:outputText value="#{usr.address}"/>
+   
+   <h:outputLabel for="txtgender" value="Enter the gender" />
+   <p:selectOneMenu id="txtgender" value="#{usr.gender}" required="true" label="Gender" requiredMessage="plz enter the gender">
+   <f:selectItem itemLabel="SELECT GENDER" itemValue="" noSelectionOption="true"/>
+   <f:selectItem itemLabel="MALE" itemValue="MALE" />
+   <f:selectItem itemLabel="FEMALE" itemValue="FEMALE" />
+   </p:selectOneMenu>
+   <p:message for="txtgender"/>
+   <h:outputText value="#{usr.gender}"/>
+   
+   </h:panelGrid>
+    </p:panel>
+    <p:commandButton update="@(form)" value="All Forms"/>
+    <p:commandButton update="@(.ui-panel)" value="All Panels"/>
+    <p:commandButton update="@(.ui-panel)" process="@(.ui-panel :input)" value="Inputs Of Panel"/>
+    <p:commandButton update="@(.ui-panel)" process="@(.ui-panel :input:not(select))" value="Input of panel Except select"/>
+     </h:form> 
+   </h:body>
+</html>

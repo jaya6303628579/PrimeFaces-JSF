@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	 <h:head>
+      <title>Ajax Listener</title>
+   </h:head>
+   <h:body>
+   <h:form>
+   <p:panel id="pn1" header="Panel">
+   <h:outputText value="jsf"/><br/>
+   <h:outputText value="java"/><br/>
+   <h:outputText value="jsp"/><br/>
+   <h:outputText value="SpringBoot"/><br/>
+   <h:outputText value="Spring"/><br/>
+   <h:outputText value="PrimeFaces"/>
+   
+   </p:panel>
+    <p:commandButton value="Highlight" onclick="PF('spot').show()"/>
+    <p:spotlight target="pn1" widgetVar="spot"/>
+     </h:form> 
+   </h:body>
+</html>

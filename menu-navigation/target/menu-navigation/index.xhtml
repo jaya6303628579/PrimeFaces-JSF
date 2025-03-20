@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	 <h:head>
+      <title>Menu</title>
+   </h:head>
+   <h:body>
+     <h1>MENU And Navigation</h1>
+     <f:view>
+     <h:form>
+     <h1>BreadCrumb</h1>
+     <p:breadCrumb homeDisplay="icon">
+     <p:menuitem value="Home" url="index.xhtml"/>
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:breadCrumb>
+     
+     <h1>context-menu give right in the page</h1>
+     <p:contextMenu>
+     <p:menuitem value="Home" url="index.xhtml"/>
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:contextMenu>
+     
+     <h1>dock - menu</h1>
+     <p:dock position="top">
+     <p:menuitem value="Home" icon="resources/images/fb.png" url="index.xhtml"/>
+     <p:menuitem value="page1" icon="resources/images/insta.png" url="page1.xhtml"/>
+     <p:menuitem value="page2" icon="resources/images/whats.png" url="page2.xhtml"/>
+     </p:dock>
+     
+     <h1>MENU AND SUBMENU</h1>
+     <p:menu>
+     <p:submenu label="HOME">
+     <p:menuitem value="Home" url="index.xhtml"/>
+     </p:submenu>
+     <p:submenu label="music">
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:submenu>
+     </p:menu>
+      <h1>tieredMenu</h1>
+     <p:tieredMenu>
+     <p:submenu label="HOME">
+     <p:menuitem value="Home" url="index.xhtml"/>
+     </p:submenu>
+     <p:submenu label="music">
+     <p:menuitem value="page1" url="page1.xhtml"/>
+     <p:menuitem value="page2" url="page2.xhtml"/>
+     </p:submenu>
+     </p:tieredMenu>
+     <h1>tab menu</h1>
+     <p:tabMenu activeIndex="#{param.i}">
+     <p:menuitem value="page1" url="page1.xhtml">
+     <f:param name="i" value="0"/>
+     </p:menuitem>
+     <p:menuitem value="page2" url="page2.xhtml">
+     <f:param name="i" value="1"/>
+     </p:menuitem>
+     </p:tabMenu>
+     </h:form>
+     </f:view>
+     
+   </h:body>
+</html>

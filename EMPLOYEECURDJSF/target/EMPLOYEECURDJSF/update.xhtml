@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+    <title>EMS</title>
+</h:head>
+<h:body>
+<center><h3><h:outputText value="WELCOME TO THE EMPLOYEE MANAGEMENT SYSTEM" /></h3></center>
+<h3><h:outputText value="UPDATE RECORD" /> </h3>
+	<h:form>
+<h:panelGrid columns="2">
+Employee Id : <h:inputText value="#{emsbean.ems.empId}" readonly="true" />
+Employee Name : <h:inputText value="#{emsbean.ems.empName}" />
+Employee Mail-Id: <h:inputText value="#{emsbean.ems.empMail}" />
+Employee Mobile No: <h:inputText value="#{emsbean.ems.empMobile}" />
+Employee Designation: <h:inputText value="#{emsbean.ems.empDesignation}" />
+Employee Salary: <h:inputText value="#{emsbean.ems.empSalary}" />
+Employee Address: <h:inputText value="#{emsbean.ems.empAddress}" />
+<h:commandButton action="#{emsbean.update()}" value="UPDATE" />
+</h:panelGrid>
+</h:form>
+</h:body>
+</html>
